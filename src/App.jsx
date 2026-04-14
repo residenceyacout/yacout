@@ -1,7 +1,12 @@
 import React, { useState, useMemo, useEffect } from 'react';
 import { Building2, Calendar, ChevronRight, Calculator, Home, Users, Wallet, CheckCircle2, XCircle, BarChart3, Plus, Save, X, Edit2, Trash2, LogOut, KeyRound, User } from 'lucide-react';
-import { supabase } from './supabaseClient'; 
+import { createClient } from '@supabase/supabase-js'
 
+// Ces lignes permettent de lire les clés secrètes sur Vercel ou en local
+const supabaseUrl = import.meta.env.VITE_SUPABASE_URL
+const supabaseKey = import.meta.env.VITE_SUPABASE_ANON_KEY
+
+export const supabase = createClient(supabaseUrl, supabaseKey)
 // --- BASE DATA ---
 const baseApartments = [
   { block: "A", apt: "A1", name: "Joudat" }, { block: "A", apt: "A2", name: "Joudat" }, { block: "A", apt: "A3", name: "Aouaj Youssef" }, { block: "A", apt: "A4", name: "Amari Aziz" }, { block: "A", apt: "A5", name: "Tamimi Salh" }, { block: "A", apt: "A7", name: "Fathaoui Fouad" }, { block: "A", apt: "A8", name: "Hablatou Mina" },
