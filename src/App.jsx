@@ -67,7 +67,7 @@ export default function App() {
       setIsLoggedIn(true);
     } 
     // Logique Résident (Identifiant importe peu, seul le mot de passe compte comme demandé)
-    else if (loginPassword === "yacout@mansouria") {
+    else if (loginPassword === "2016") {
       setIsAdmin(false);
       setIsLoggedIn(true);
     } 
